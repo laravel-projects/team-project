@@ -1,0 +1,17 @@
+.app-body{
+	margin-top: 5rem;
+} 
+.birthday-form select{
+	padding: 5px 5%;
+} 
+.pay-form select{
+	padding: 5px 5%;
+	min-width: 90%;
+} 
+.gender-form {
+	padding: 5px 5rem;
+} 
+.gender-form label{
+	cursor: pointer;
+    padding: 0 1rem;
+} 
