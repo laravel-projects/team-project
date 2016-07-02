@@ -19,6 +19,8 @@ Tokenizer PHP Extension
  install Team project by issuing the Composer create-project command in your terminal:
 ```
 git clone https://github.com/laravel-projects/team-project.git name-folder-project
+cd name-folder-project
+composer update
 ```
 
 ### License
