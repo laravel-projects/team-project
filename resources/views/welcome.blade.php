@@ -1,17 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Welcome</div>
 
-                <div class="panel-body">
-                    Your Application's Landing Page.
-                </div>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="content">
+                <div class="title">Team Project</div>
+                <p class="description">Laravel Projects By Marwen Hlaoui</p>
             </div>
-        </div>
     </div>
-</div>
+
 @endsection

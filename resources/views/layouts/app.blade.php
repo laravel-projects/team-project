@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Team Project</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/default/fonts/font-awesome-4.6.3/css/font-awesome.min.css') }}">
@@ -16,7 +16,33 @@
     <link rel="stylesheet" href="{{ asset('assets/default/css/bootstrap.min.css') }}" >
     <link rel="stylesheet" href="{{ asset('assets/default/css/default.bootstrap.min.css') }}" >
     <link rel="stylesheet" href="{{ asset('assets/app/css/app.css') }}" >
+     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+            <style>
+                html, body {
+                    height: 100%;
+                }
  
+ 
+
+                .content {
+                    text-align: center;
+                    display: inline-block;
+                    font-family: 'Lato';
+                    width: 100%;    margin-top: 20%;
+                }
+
+                .title {
+                    font-size: 96px;
+                }
+                .description {
+                    font-size: 1.8em;
+                    background-color: #fa503a;
+                    padding: 1%;
+                    color: white;
+                    font-weight: bold;
+                }
+            </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
@@ -33,7 +59,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Team Project
                 </a>
             </div>
 
