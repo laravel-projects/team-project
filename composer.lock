@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74353badd131e260f38a67e3c49584e4",
-    "content-hash": "0feb6af5bef0e094e776fba476c27e7c",
+    "hash": "1688444f1dcd0a7bbf7fb9e54a687b4d",
+    "content-hash": "de91b97344fc72771d6eba1005c70296",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -571,6 +571,76 @@
                 "storage"
             ],
             "time": "2016-06-03 19:11:39"
+        },
+        {
+            "name": "marvision-code/images-generate",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marvision-code/images-generate.git",
+                "reference": "fe93356beb5386436972f0ed5035ed2542aa91ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marvision-code/images-generate/zipball/fe93356beb5386436972f0ed5035ed2542aa91ed",
+                "reference": "fe93356beb5386436972f0ed5035ed2542aa91ed",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Marvision\\ImagesGenerate\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marwen Hlaoui",
+                    "email": "marwenhlaoui@gmail.com"
+                }
+            ],
+            "time": "2016-07-03 12:17:57"
+        },
+        {
+            "name": "marvision-code/laravel",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marvision-code/laravel.git",
+                "reference": "dfcfd0813debf85067c3a46cc15574c3614d5ea0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marvision-code/laravel/zipball/dfcfd0813debf85067c3a46cc15574c3614d5ea0",
+                "reference": "dfcfd0813debf85067c3a46cc15574c3614d5ea0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Marvision\\Laravel\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marwen Hlaoui",
+                    "email": "marwenhlaoui@gmail.com"
+                }
+            ],
+            "time": "2016-07-02 03:28:16"
         },
         {
             "name": "monolog/monolog",

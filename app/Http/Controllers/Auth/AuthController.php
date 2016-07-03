@@ -49,9 +49,10 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'firstname' => 'required|max:255',
+            'lastname'  => 'required|max:255',
+            'email'     => 'required|email|max:255|unique:users',
+            'password'  => 'required|min:6|confirmed',
         ]);
     }
 
@@ -61,12 +62,28 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function create($data)
     {
+        $data = (object) $data;
+        $gender     = ($data->gender == 1)? 1:0;
+        $username   = str_slug($data->firstname.$data->lastname);
+        $i = 1;
+        while (count(User::where('username',$username)->get()) > 0) {
+            $username = $username.$i;
+            $i++;
+        }  
+        $birthday = $data->year.'-'.$data->month.'-'.$data->day;
+        dd($data);
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'firstname' => $data->firstname,
+            'lastname'  => $data->lastname,
+            'username'  => $username,
+            'gender'    => $gender,
+            'birthday'  => $birthday,
+            'pay'       => $data->country,
+            'email'     => $data->email,
+            'password'  => bcrypt($data->password),
+            'created_at'=> date("Y-m-d H:i:s")
         ]);
     }
 }

@@ -149,6 +149,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
+        Marvision\Laravel\MarvisionServiceProvider::class,
+        Marvision\ImagesGenerate\ImagesGenerateServiceProvider::class,
 
         /*
          * Application Service Providers...

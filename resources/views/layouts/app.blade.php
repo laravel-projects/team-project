@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Team Project</title>
+    <title>@yield('title','Team Project')</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/default/fonts/font-awesome-4.6.3/css/font-awesome.min.css') }}">

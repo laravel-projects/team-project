@@ -9,11 +9,11 @@ Team Project is a web application create with Laravel php framework , by Marwen 
 
 You will need to make sure your server meets the following requirements:
 
-PHP >= 5.5.9
-OpenSSL PHP Extension
-PDO PHP Extension
-Mbstring PHP Extension
-Tokenizer PHP Extension
+###### PHP >= 5.5.9
+###### OpenSSL PHP Extension
+###### PDO PHP Extension
+###### Mbstring PHP Extension
+###### Tokenizer PHP Extension
  
 ### Install
  install Team project by issuing the Composer create-project command in your terminal:
