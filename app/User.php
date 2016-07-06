@@ -17,9 +17,10 @@ class User extends Authenticatable
             'username'  ,
             'gender' ,
             'email' , 
+            'password', 
             'img',
             'birthday',
-            'pay',
+            'country',
             'city',
             'Address',
             'phone',
@@ -27,7 +28,9 @@ class User extends Authenticatable
             'twitter',
             'github',
             'youtube',
-            'web',
+            'web', 
+            'role',
+            'bloque', 
             'last_login',
             'last_logout',
 
@@ -40,7 +43,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
             'password', 
-            'remember_token',
+            'remember_token', 
             'role',
             'bloque', 
     ];

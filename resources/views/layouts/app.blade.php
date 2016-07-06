@@ -42,6 +42,11 @@
                     color: white;
                     font-weight: bold;
                 }
+                .nav-user-img{
+                    max-width: 2rem;
+                    max-height: 2rem;
+                    border-radius: 2rem;
+                }
             </style>
 </head>
 <body id="app-layout">
@@ -78,7 +83,7 @@
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                <img src="{{ asset(Auth::user()->img) }}" class="nav-user-img"> {{ Auth::user()->username }}  
                             </a>
 
                             <ul class="dropdown-menu" role="menu">

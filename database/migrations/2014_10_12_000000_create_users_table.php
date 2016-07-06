@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
      *  web
      *  last_login
      *  last_logout
+     *  permission
      *  role  
      *  bloque  
      *  remember_token  
@@ -49,7 +50,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('img');
             $table->date('birthday');
-            $table->string('pay');
+            $table->string('country');
             $table->string('city');
             $table->string('adress');
             $table->string('phone');
@@ -59,7 +60,7 @@ class CreateUsersTable extends Migration
             $table->string('youtube');
             $table->string('web');
             $table->dateTime('last_login');
-            $table->dateTime('last_logout');
+            $table->dateTime('last_logout'); 
             $table->integer('role');/*0:user,1:admin*/
             $table->integer('bloque');/*0:bloque,1:active,2:pas encore vérifié */
             $table->rememberToken();

@@ -7,6 +7,7 @@ use Validator;
 use TeamProject\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Marvision\ImagesGenerate\IGText as MGimage;
 
 class AuthController extends Controller
 {
@@ -64,26 +65,33 @@ class AuthController extends Controller
      */
     protected function create($data)
     {
+        $user = (array) $data;
         $data = (object) $data;
-        $gender     = ($data->gender == 1)? 1:0;
+        $gender    = ($data->gender == 1)? 1:0; 
+        $imgBg     = ($data->gender == 1)? "#fa503a":"red";
+        $imgTxt = strtoupper($data->firstname[0].$data->lastname[0]); 
+        $img = MGimage::run($imgTxt,"white",$imgBg ,30,30);
         $username   = str_slug($data->firstname.$data->lastname);
         $i = 1;
         while (count(User::where('username',$username)->get()) > 0) {
             $username = $username.$i;
             $i++;
         }  
-        $birthday = $data->year.'-'.$data->month.'-'.$data->day;
-        dd($data);
+        $birthday = $data->year.'-'.$data->month.'-'.$data->day;  
         return User::create([
             'firstname' => $data->firstname,
             'lastname'  => $data->lastname,
             'username'  => $username,
             'gender'    => $gender,
+            'img'       => $img,
             'birthday'  => $birthday,
-            'pay'       => $data->country,
+            'country'   => $data->country,
+            'role'      => 0,
+            'bloque'    => 2,
             'email'     => $data->email,
-            'password'  => bcrypt($data->password),
-            'created_at'=> date("Y-m-d H:i:s")
-        ]);
+            'password'  => bcrypt($user["password"]),
+            'last_login'=> date("Y-m-d H:i:s"),
+            'created_at'=> date("Y-m-d H:i:s"),
+        ]); 
     }
 }
